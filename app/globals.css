@@ -2,26 +2,113 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+    box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+    width: 100%;
+    height: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    background-color: #9d35ef;
+    width: 1500px;
+    min-height: 100vw;
+    height: 1000px;
+    min-height: 100vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+}
+
+.section_wave {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+}
+
+.dash {
+    stroke-dasharray: 700;
+    animation: dash 15s linear infinite;
+    stroke: #fbc02e;
+}
+
+.dash_0 {
+    animation-delay: 0s;
+}
+
+.dash_1 {
+    transform: translateY(100px);
+    animation-delay: 2.5s;
+}
+
+.dash_2 {
+    transform: translateY(200px);
+    animation-delay: 6s;
+}
+
+.dash_3 {
+    transform: translateY(300px);
+    animation-delay: 4s;
+}
+
+.dash_4 {
+    transform: translateY(400px);
+    animation-delay: 1s;
+}
+
+.dash_5 {
+    transform: translateY(500px);
+    animation-delay: 5s;
+}
+
+.dash_6 {
+    transform: translateY(600px);
+    animation-delay: 3s;
+}
+
+.dash_7 {
+    transform: translateY(700px);
+    animation-delay: 1.5s;
+}
+
+.dash_8 {
+    transform: translateY(800px);
+    animation-delay: 5.5s;
+}
+
+.dash_9 {
+    transform: translateY(900px);
+    animation-delay: 1s;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 10;
+        stroke: #fbc02e;
+    }
+
+    50% {
+        stroke: #19d8ff;
+    }
+
+    100% {
+        stroke-dashoffset: 9800;
+        stroke: #fbc02e;
+    }
 }
