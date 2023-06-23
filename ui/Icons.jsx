@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import logo from '../public/birthdayreminder.svg'
 
-export const Logo = () => {
+// Menu & Logo Icons
+export const Logo = ({ onClick }) => {
     return (
-        <div className='w-9 h-14'>
+        <div onClick={onClick} className='w-9 h-14'>
             <Image src={logo} alt='Logo' />
         </div>
     )
@@ -23,9 +24,66 @@ export const Menu = ({ onClick }) => {
     )
 }
 
-export const Balloons = () => {
+export const CloseWindow = ({ onClick }) => {
     return (
-        <svg className='w-44 h-44' viewBox='0 0 511.986 511.986'>
+        <svg
+            onClick={onClick}
+            width='48'
+            height='48'
+            fill='none'
+            className='cursor-pointer'
+        >
+            <path fill='url(#a)' d='M0 0h48v48H0z' />
+            <defs>
+                <pattern
+                    id='a'
+                    width='1'
+                    height='1'
+                    patternContentUnits='objectBoundingBox'
+                >
+                    <use xlinkHref='#b' transform='scale(.02083)' />
+                </pattern>
+                <image
+                    xlinkHref='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABTElEQVR4nO2ZTU7DMBBGRyLcAta9EAsUxO3KIg0SFwNEs4RKD1m4CEUxdcb4p2LeMsqk3/PUdlOLGIZhNAtwDTwCE+WZgCdgkxL+hfq8uiwaATfyrbDTCNT42oTYawSaQkygMmIdWOYA3ANb1jMCt8B7rQ648L2/92KlhAvf+dqbGIkcAv3s/g4YIuqGY/gj7lk1BNwoXs5qTnXie+RnNQ81BNZKqMPnFIiVSAqfW+CURHL4EgKhydkFrsVM9uICi51IHfnSAkGJlPA1BLqAwLZ1gXEp/F9ISAGBs57E4y9LpWbHLioQs84nS0gmgTWbVJKEZBDQ7LBqCckgcPY/pw/AXeTIBzvB1wvNRw0B/Af3mmXR1/Qx4XMKFENMoDLyHzsw0Q5vGgF3uNAKg0Zg4w8XavMMXK0W+HFKs3P/z1cIvvd7hS68YRiGlOAT8QhCL0i03NcAAAAASUVORK5CYII='
+                    id='b'
+                    width='48'
+                    height='48'
+                />
+            </defs>
+        </svg>
+    )
+}
+
+// Mode Icons
+export const SunIcon = () => {
+    return (
+        <svg
+            className='w-7 md:w-8 h-7 md:h-8 fill-purple-500 hover:fill-purple-300 cursor-pointer'
+            viewBox='0 0 24 24'
+        >
+            <path d='M11.75 5.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h.5a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1h-.5ZM16.42 7.227a1 1 0 0 1 0-1.414l1.767-1.768a1 1 0 0 1 1.414 0l.354.354a1 1 0 0 1 0 1.414L18.187 7.58a1 1 0 0 1-1.414 0l-.354-.354ZM18.5 11.75a1 1 0 0 1 1-1H22a1 1 0 0 1 1 1v.5a1 1 0 0 1-1 1h-2.5a1 1 0 0 1-1-1v-.5ZM16.773 16.42a1 1 0 0 1 1.414 0l1.768 1.767a1 1 0 0 1 0 1.414l-.354.354a1 1 0 0 1-1.414 0l-1.768-1.768a1 1 0 0 1 0-1.414l.354-.354ZM12.25 18.5a1 1 0 0 1 1 1V22a1 1 0 0 1-1 1h-.5a1 1 0 0 1-1-1v-2.5a1 1 0 0 1 1-1h.5ZM7.58 16.773a1 1 0 0 1 0 1.414l-1.767 1.768a1 1 0 0 1-1.414 0l-.354-.354a1 1 0 0 1 0-1.414l1.768-1.768a1 1 0 0 1 1.414 0l.354.354ZM5.5 12.25a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-.5a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1v.5ZM7.227 7.58a1 1 0 0 1-1.414 0L4.045 5.814a1 1 0 0 1 0-1.414l.354-.354a1 1 0 0 1 1.414 0l1.768 1.768a1 1 0 0 1 0 1.414l-.354.354ZM7 12a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z' />
+        </svg>
+    )
+}
+
+export const MoonIcon = () => {
+    return (
+        <svg
+            className='w-7 md:w-8 h-7 md:h-8 fill-purple-500 hover:fill-purple-300 cursor-pointer'
+            viewBox='0 0 24 24'
+        >
+            <path d='M12.056 3.6a1 1 0 0 0-.908-1.564C6.024 2.469 2 6.764 2 12c0 5.523 4.477 10 10 10 5.236 0 9.531-4.024 9.964-9.148a1 1 0 0 0-1.564-.908A6 6 0 0 1 12.055 3.6Z' />
+        </svg>
+    )
+}
+
+// Decoratives
+export const Balloons = ({ text }) => {
+    return (
+        <svg
+            className='w-44 h-44 md:w-52 md:h-52 xl:w-64 xl:h-64'
+            viewBox='0 0 511.986 511.986'
+        >
             <path
                 fill='#e6e9ed'
                 d='M370.348 427.927c-8.828-9.156-11.203-19.187-7.266-30.624 3.297-9.594 9.828-16.516 9.891-16.594l-7.688-7.375-7.656-7.438c-.953 1-9.562 10.094-14.437 23.656-6.905 19.203-2.734 38.093 11.781 53.154 9.077 9.438 11.827 20.375 8.405 33.375-2.172 8.297-6.297 14.937-8.046 17.499a10.59 10.59 0 0 0-3.344 7.75c0 5.875 4.78 10.655 10.671 10.655 3.453 0 6.531-1.656 8.469-4.219l.172.125c.344-.438 8.453-10.905 12.5-25.576 5.658-20.546 1.002-39.358-13.452-54.388z'
@@ -56,7 +114,7 @@ export const Balloons = () => {
                 opacity='.2'
             />
             <path
-                fill='#ac92eb'
+                className='fill-purple-400 hover:fill-purple-300'
                 d='M309.319 159.996c0 88.365-62.076 159.996-138.652 159.996-76.592 0-138.668-71.631-138.668-159.996C31.999 71.632 94.075 0 170.667 0c76.576 0 138.652 71.632 138.652 159.996z'
             />
             <path
@@ -64,14 +122,23 @@ export const Balloons = () => {
                 d='M170.667 42.663c-53.029 0-95.997 52.53-95.997 117.333 0 5.891 4.766 10.664 10.655 10.664 5.891 0 10.672-4.773 10.672-10.664 0-13.461 2.141-26.476 6.375-38.694 4-11.586 9.703-21.937 16.921-30.765 14-17.109 32.25-26.538 51.374-26.538 5.891 0 10.656-4.773 10.656-10.664s-4.766-10.672-10.656-10.672z'
                 opacity='.2'
             />
+            <text
+                fontSize={36}
+                fontWeight={600}
+                textAnchor='middle'
+                x='170'
+                y='160'
+            >
+                {text}
+            </text>
         </svg>
     )
 }
 
-export const Balloon = () => {
+export const Balloon = ({ text }) => {
     return (
         <svg
-            className='w-40 h-40 flex justify-center'
+            className='w-40 h-40 md:w-48 md:h-48 xl:w-60 xl:h-60 flex justify-center'
             viewBox='0 0 340 511.986'
         >
             <path
@@ -83,7 +150,7 @@ export const Balloon = () => {
                 d='M191.995 319.992h-10.672v-12.688h-21.328v12.688h-10.671c-5.891 0-10.656 4.781-10.656 10.656 0 5.906 4.766 10.687 10.656 10.687h42.671c5.89 0 10.671-4.78 10.671-10.687 0-5.875-4.781-10.656-10.671-10.656z'
             />
             <path
-                fill='#e479e4'
+                className='fill-fuchsia-400 hover:fill-fuchsia-300'
                 d='M309.319 159.996c0 88.365-62.076 159.996-138.652 159.996-76.592 0-138.668-71.631-138.668-159.996C31.999 71.632 94.075 0 170.667 0c76.576 0 138.652 71.632 138.652 159.996z'
             />
             <path
@@ -91,13 +158,25 @@ export const Balloon = () => {
                 d='M170.667 42.663c-53.029 0-95.997 52.53-95.997 117.333 0 5.891 4.766 10.664 10.655 10.664 5.891 0 10.672-4.773 10.672-10.664 0-13.461 2.141-26.476 6.375-38.694 4-11.586 9.703-21.937 16.921-30.765 14-17.109 32.25-26.538 51.374-26.538 5.891 0 10.656-4.773 10.656-10.664s-4.766-10.672-10.656-10.672z'
                 opacity='.2'
             />
+            <text
+                fontSize={36}
+                fontWeight={600}
+                textAnchor='middle'
+                x='170'
+                y='160'
+            >
+                {text}
+            </text>
         </svg>
     )
 }
 
 export const Cake = () => {
     return (
-        <svg className='w-36 h-36' viewBox='0 0 64 64'>
+        <svg
+            className='w-44 h-44 md:w-48 md:h-48 xl:w-60 xl:h-60'
+            viewBox='0 0 64 64'
+        >
             <ellipse cx='32' cy='49.4' fill='#d0d0d0' rx='30' ry='12.6' />
             <path
                 fill='#d3976e'
