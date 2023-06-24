@@ -16,3 +16,15 @@ export const BalloonsLink = ({ text, href }) => {
         </Link>
     )
 }
+
+export const MobileLink = ({ children, href, onClick }) => {
+    return (
+        <Link
+            className='text-lg font-semibold text-cyan-600'
+            onClick={onClick}
+            href={href}
+        >
+            {children}
+        </Link>
+    )
+}

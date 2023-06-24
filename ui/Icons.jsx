@@ -4,7 +4,7 @@ import logo from '../public/birthdayreminder.svg'
 // Menu & Logo Icons
 export const Logo = ({ onClick }) => {
     return (
-        <div onClick={onClick} className='w-9 h-14'>
+        <div onClick={onClick} className='w-9 h-14 lg:w-10 lg:h-16'>
             <Image src={logo} alt='Logo' />
         </div>
     )
@@ -27,29 +27,10 @@ export const Menu = ({ onClick }) => {
 export const CloseWindow = ({ onClick }) => {
     return (
         <svg
-            onClick={onClick}
-            width='48'
-            height='48'
-            fill='none'
-            className='cursor-pointer'
+            className='fill-purple-100 h-10 w-10 stroke-purple-100'
+            viewBox='0 0 24 24'
         >
-            <path fill='url(#a)' d='M0 0h48v48H0z' />
-            <defs>
-                <pattern
-                    id='a'
-                    width='1'
-                    height='1'
-                    patternContentUnits='objectBoundingBox'
-                >
-                    <use xlinkHref='#b' transform='scale(.02083)' />
-                </pattern>
-                <image
-                    xlinkHref='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABTElEQVR4nO2ZTU7DMBBGRyLcAta9EAsUxO3KIg0SFwNEs4RKD1m4CEUxdcb4p2LeMsqk3/PUdlOLGIZhNAtwDTwCE+WZgCdgkxL+hfq8uiwaATfyrbDTCNT42oTYawSaQkygMmIdWOYA3ANb1jMCt8B7rQ648L2/92KlhAvf+dqbGIkcAv3s/g4YIuqGY/gj7lk1BNwoXs5qTnXie+RnNQ81BNZKqMPnFIiVSAqfW+CURHL4EgKhydkFrsVM9uICi51IHfnSAkGJlPA1BLqAwLZ1gXEp/F9ISAGBs57E4y9LpWbHLioQs84nS0gmgTWbVJKEZBDQ7LBqCckgcPY/pw/AXeTIBzvB1wvNRw0B/Af3mmXR1/Qx4XMKFENMoDLyHzsw0Q5vGgF3uNAKg0Zg4w8XavMMXK0W+HFKs3P/z1cIvvd7hS68YRiGlOAT8QhCL0i03NcAAAAASUVORK5CYII='
-                    id='b'
-                    width='48'
-                    height='48'
-                />
-            </defs>
+            <path d='M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414Z' />
         </svg>
     )
 }

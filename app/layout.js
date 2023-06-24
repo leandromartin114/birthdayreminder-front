@@ -1,5 +1,6 @@
 import './globals.css'
 // eslint-disable-next-line camelcase
+import MenuContextProvider from '@/context/MenuContext'
 import Provider from './providers'
 import { Poppins } from 'next/font/google'
 import { LayoutBackground } from '@/components/LayoutBackground'
@@ -15,13 +16,15 @@ export default function RootLayout({ children }) {
     return (
         <html lang='en'>
             <body className={poppins.className}>
-                <Provider>
-                    <LayoutBackground>
-                        <div className='flex items-center justify-center px-8'>
-                            {children}
-                        </div>
-                    </LayoutBackground>
-                </Provider>
+                <MenuContextProvider>
+                    <Provider>
+                        <LayoutBackground>
+                            <div className='flex items-center justify-center'>
+                                {children}
+                            </div>
+                        </LayoutBackground>
+                    </Provider>
+                </MenuContextProvider>
             </body>
         </html>
     )

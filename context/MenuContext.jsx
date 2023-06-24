@@ -1,4 +1,6 @@
+'use client'
 import { createContext, useState } from 'react'
+import { removeToken } from '@/lib/api'
 
 export const MenuContext = createContext()
 
@@ -6,7 +8,7 @@ const MenuContextProvider = ({ children }) => {
     const [open, setOpen] = useState(false)
 
     const logout = () => {
-        // removeToken()
+        removeToken()
     }
 
     const handleToggle = () => {
@@ -14,8 +16,8 @@ const MenuContextProvider = ({ children }) => {
     }
 
     const value = {
-        handleToggle,
         open,
+        handleToggle,
         logout,
     }
 
