@@ -20,7 +20,7 @@ export const BalloonsLink = ({ text, href }) => {
 export const MobileLink = ({ children, href, onClick }) => {
     return (
         <Link
-            className='text-lg font-semibold text-cyan-600'
+            className='text-lg font-semibold text-cyan-600 hover:bg-gray-400 hover:text-cyan-300 w-full rounded-full p-2'
             onClick={onClick}
             href={href}
         >

@@ -23,7 +23,7 @@ export const MobileNav = () => {
                 }`}
             />
             <ul
-                className={`fixed inset-0 m-auto gap-4 flex flex-col items-center justify-center py-2 bg-purple-100 rounded-full shadow-xl transition-all duration-400 ease-linear overflow-hidden z-20 ${
+                className={`fixed inset-0 w-full m-auto gap-4 flex flex-col items-center justify-center py-2 bg-purple-100 dark:bg-cyan-950 rounded-full shadow-xl transition-all duration-400 ease-linear overflow-hidden z-20 ${
                     open ? 'max-h-[600px]' : 'max-h-0 invisible'
                 }`}
             >

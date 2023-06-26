@@ -11,6 +11,7 @@
     top: 0;
     left: 0;
     overflow: hidden;
+    z-index: -20;
 }
 
 .background span {
@@ -23,6 +24,7 @@
     animation-duration: 40;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    z-index: -10;
 }
 
 .background span:nth-child(0) {

@@ -5,3 +5,11 @@ export const Title = ({ children }) => {
         </h1>
     )
 }
+
+export const Small = ({ children }) => {
+    return (
+        <p className='text-xs lg:text-sm text-purple-600 dark:text-purple-50 font-normal'>
+            {children}
+        </p>
+    )
+}
