@@ -17,7 +17,7 @@ export const Menu = ({ onClick }) => {
             width='35'
             height='24'
             fill='none'
-            className='cursor-pointer fill-purple-500 hover:fill-purple-300'
+            className='cursor-pointer fill-purple-500 dark:fill-purple-400 hover:fill-purple-300'
         >
             <path d='M0 24h35v-4H0v4Zm0-10h35v-4H0v4ZM0 0v4h35V0H0Z' />
         </svg>
@@ -82,7 +82,7 @@ export const CloseWindow = ({ onClick }) => {
 export const SunIcon = () => {
     return (
         <svg
-            className='w-7 md:w-8 h-7 md:h-8 fill-purple-500 hover:fill-purple-300 cursor-pointer'
+            className='w-7 md:w-8 h-7 md:h-8 fill-purple-400 hover:fill-purple-300 cursor-pointer'
             viewBox='0 0 24 24'
         >
             <path d='M11.75 5.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h.5a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1h-.5ZM16.42 7.227a1 1 0 0 1 0-1.414l1.767-1.768a1 1 0 0 1 1.414 0l.354.354a1 1 0 0 1 0 1.414L18.187 7.58a1 1 0 0 1-1.414 0l-.354-.354ZM18.5 11.75a1 1 0 0 1 1-1H22a1 1 0 0 1 1 1v.5a1 1 0 0 1-1 1h-2.5a1 1 0 0 1-1-1v-.5ZM16.773 16.42a1 1 0 0 1 1.414 0l1.768 1.767a1 1 0 0 1 0 1.414l-.354.354a1 1 0 0 1-1.414 0l-1.768-1.768a1 1 0 0 1 0-1.414l.354-.354ZM12.25 18.5a1 1 0 0 1 1 1V22a1 1 0 0 1-1 1h-.5a1 1 0 0 1-1-1v-2.5a1 1 0 0 1 1-1h.5ZM7.58 16.773a1 1 0 0 1 0 1.414l-1.767 1.768a1 1 0 0 1-1.414 0l-.354-.354a1 1 0 0 1 0-1.414l1.768-1.768a1 1 0 0 1 1.414 0l.354.354ZM5.5 12.25a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-.5a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1v.5ZM7.227 7.58a1 1 0 0 1-1.414 0L4.045 5.814a1 1 0 0 1 0-1.414l.354-.354a1 1 0 0 1 1.414 0l1.768 1.768a1 1 0 0 1 0 1.414l-.354.354ZM7 12a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z' />

@@ -1,6 +1,7 @@
 import { Logo } from '@/ui/Icons'
 import { ThemeSwitcher } from './ThemeSwitcher'
 import { MobileNav } from './MobileNav'
+import { DesktopNav } from './DesktopNav'
 
 export const Header = () => {
     return (
@@ -9,6 +10,7 @@ export const Header = () => {
             <div className='flex items-center justify-between gap-5 md:gap-7 lg:gap-9'>
                 <ThemeSwitcher />
                 <MobileNav />
+                <DesktopNav />
             </div>
         </header>
     )
