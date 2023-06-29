@@ -1,5 +1,6 @@
+'use client'
 import { useState } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { Toaster, toast } from 'sonner'
 import { useForm } from 'react-hook-form'
 import { DotPulse } from '@uiball/loaders'
@@ -68,7 +69,7 @@ export const LoginForm = () => {
         <>
             {!email ? (
                 <form
-                    className='grid content-center gap-4'
+                    className='grid content-center gap-6 border border-purple-400 rounded-lg p-4'
                     onSubmit={handleSubmit(handleSendCode)}
                 >
                     <label className='flex flex-col gap-1'>
@@ -76,13 +77,16 @@ export const LoginForm = () => {
                             email
                         </span>
                         <input
-                            className='text-lg bg-purple-100 rounded-lg p-2 w-full'
+                            className='text-lg bg-purple-50 rounded-lg p-2 w-full'
                             type='email'
                             {...register('email', { required: true })}
                         />
                         {errors.email && <span>This field is required</span>}
                     </label>
-                    <button type='submit'>
+                    <button
+                        className='rounded-full bg-purple-500 text-white text-base font-semibold px-1 py-2 w-full hover:bg-purple-400'
+                        type='submit'
+                    >
                         {loader ? (
                             <DotPulse size={40} speed={1.3} color='black' />
                         ) : (
